@@ -1,0 +1,10 @@
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\bin\Debug\Calculator.exe
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\bin\Debug\CalculatorClassLibrary.dll
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\bin\Debug\CalculatorClassLibrary.pdb
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\obj\Debug\Calculator.csproj.CopyComplete
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\obj\Debug\Calculator.exe
+C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\Calculator\obj\Debug\Calculator.pdb
