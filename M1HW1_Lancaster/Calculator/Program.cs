@@ -41,7 +41,7 @@ Enter a number:";
 				{
 					continue;
 				}
-				// operation input validation. 
+				// operation input validation.
 
 				while (continueSubLoop)
 				{
@@ -111,6 +111,12 @@ Enter a number:";
 			}
 			// main menu loop.
 		}
+
+		/// <summary>
+		/// prompt user for int input. 
+		/// </summary>
+		/// <param name="prompt">prompt to give user before receiving input.</param>
+		/// <returns>returns user input cast as int.</returns>
 		static int GetInput(string prompt)
 		{
 			int output = 0;
@@ -128,6 +134,8 @@ Enter a number:";
 					Console.WriteLine("invalid entry. entry must be an integer.");
 				}
 			}
+			// input validation. 
+
 			return output;
 		}
 	}
