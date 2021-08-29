@@ -1,6 +1,0 @@
-C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\CalculatorClassLibrary\bin\Debug\CalculatorClassLibrary.dll
-C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\CalculatorClassLibrary\bin\Debug\CalculatorClassLibrary.pdb
-C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\CalculatorClassLibrary\obj\Debug\CalculatorClassLibrary.csprojAssemblyReference.cache
-C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\CalculatorClassLibrary\obj\Debug\CalculatorClassLibrary.csproj.CoreCompileInputs.cache
-C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\CalculatorClassLibrary\obj\Debug\CalculatorClassLibrary.dll
-C:\Users\Adaml\OneDrive\Documents\Code and Programs\CTS-285\M1HW1_Lancaster\CalculatorClassLibrary\obj\Debug\CalculatorClassLibrary.pdb
