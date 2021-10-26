@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Dataman_2Lib;
 
 namespace ConsoleUI
 {
@@ -26,26 +27,26 @@ namespace ConsoleUI
 					Console.WriteLine();
 
 					input = Console.ReadLine();
-				}
-				while (input != "1" &&
-					   input != "2" &&
-					   input != "3" &&
-					   input != "4");
 
-				switch (input)
-				{
-					case "1":
-						AnswerChecker();
-						break;
-					case "2":
-						MemoryBank();
-						break;
-					case "3":
-						NumberGuesser();
-						break;
-					case "4":
-						break;
+					switch (input)
+					{
+						case "1":
+							AnswerChecker();
+							break;
+						case "2":
+							MemoryBank();
+							break;
+						case "3":
+							NumberGuesser();
+							break;
+						case "4":
+							break;
+						default:
+							Console.WriteLine("INVALID ENTRY.");
+							break;
+					}
 				}
+				while (input != "4");
 			}
 
 			void AnswerChecker()
@@ -95,12 +96,52 @@ namespace ConsoleUI
 			
 			void MemoryBank()
 			{
+				string input;
 
+				do
+				{
+					Console.WriteLine();
+					Console.WriteLine("1. ENTER PROBLEMS");
+					Console.WriteLine("2. ANSWER PROBLEMS");
+					Console.WriteLine("3. EXIT");
+					Console.WriteLine("MAKE A SELECTION");
+					input = Console.ReadLine();
+
+					switch (input)
+					{
+						case "1":
+							MemoryBankEnter();
+							break;
+						case "2":
+							MemoryBankAnswer();
+							break;
+					}
+				}
+				while (input != "3");
 			}
 
 			void NumberGuesser()
 			{
+				string input;
+				int intInput,
+					randomNumber,
+					tries = 0;
 
+				Random random = new Random();
+				randomNumber = random.Next(9, 101);
+
+				do
+				{
+					Console.WriteLine($"{random.Next(9, randomNumber)}  ???  {random.Next(randomNumber, 101)}");
+
+					input = Console.ReadLine();
+					intInput = int.Parse(input);
+					tries++;
+				}
+				while (intInput != randomNumber);
+				LightShow();
+				Console.WriteLine($"IT TOOK YOU {tries} TO GUESS THE NUMBER! PRESS [ENTER] TO CONTINUE.");
+				Console.ReadLine();
 			}
 
 			void LightShow()
@@ -113,6 +154,87 @@ namespace ConsoleUI
 			void Incorrect()
 			{
 				Console.WriteLine("EEE");
+			}
+
+			void MemoryBankAnswer()
+			{
+				string input;
+
+				do
+				{
+					if (DataModel.MBSavedProblems.Count > 0)
+					{
+						Console.WriteLine(DataModel.MBSavedProblems[0]);
+						Console.WriteLine("ENTER YOUR ANSWER OR PRESS [ENTER] TO EXIT");
+						input = Console.ReadLine();
+						if (GetAnswer(DataModel.MBSavedProblems[0]) == int.Parse(input))
+						{
+							LightShow();
+							DataModel.MBSavedProblems.RemoveAt(0);
+						}
+						else
+						{
+							Incorrect();
+						}
+					}
+					else
+					{
+						Console.WriteLine("NO PROBLEMS SAVED. PRESS [ENTER] TO RETURN.");
+						Console.ReadLine();
+						break;
+					}
+
+				} while (input != "");
+			}
+
+			void MemoryBankEnter()
+			{
+				string input;
+
+				do
+				{
+					Console.WriteLine("ENTER A PROBLEM OR PRESS [ENTER] WHEN FINISHED.");
+					input = Console.ReadLine();
+					if (input != "")
+					{
+						DataModel.MBSavedProblems.Add(input);
+					}
+				}
+				while (input != "");
+			}
+
+			int GetAnswer(string input)
+			{
+				int rightNumber,
+					leftNumber,
+					answer;
+				string localOperator;
+
+				string[] inputTokens = input.Split(null);
+				rightNumber = int.Parse(inputTokens[0]);
+				localOperator = inputTokens[1];
+				leftNumber = int.Parse(inputTokens[2]);
+
+				switch (localOperator)
+				{
+					case "+":
+						answer = rightNumber + leftNumber;
+						break;
+					case "-":
+						answer = rightNumber - leftNumber;
+						break;
+					case "*":
+						answer = rightNumber * leftNumber;
+						break;
+					case "/":
+						answer = rightNumber / leftNumber;
+						break;
+					default:
+						answer = 0;
+						break;
+				}
+
+				return answer;
 			}
 
 			MainMenu();
